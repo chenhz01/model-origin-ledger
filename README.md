@@ -2,6 +2,8 @@
 
 An append-only, hash-chained provenance ledger for AI models and datasets: every artifact binds its sha256, upstream origin, license, and UTC timestamp into a tamper-evident JSONL chain you can re-verify in milliseconds. If you must *prove* which weights and data your system was built on, start here. [High confidence ≥80%: verifiable artifact lineage is now a supply-chain and regulatory requirement.]
 
+<p align="center"><img src="docs/demo.gif" alt="demo" width="720"></p>
+
 ## Problem
 
 AI pipelines record *nothing* auditable about their inputs. When someone asks "which exact fine-tune of which base model, trained on which dataset snapshot, under which license?", the answer lives in chat logs and stale READMEs. Post-hoc reconstruction fails in two ways: nobody remembers the exact artifact hashes, and nobody can prove the record wasn't edited after the incident. Meanwhile AI-adjacent regulation increasingly demands documented data lineage. An SBOM generator helps you *discover* the bill of materials once; it does nothing when the question is "has this record changed since we wrote it down?"
